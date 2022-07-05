@@ -3,6 +3,7 @@ require_relative "boot"
 require "rails/all"
 
 require_relative "../lib/jwt_middleware"
+require_relative "../app/api/rails7_jwt/currency"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -22,5 +23,8 @@ module Rails7Jwt
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
+    config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
   end
 end

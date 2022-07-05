@@ -11,6 +11,8 @@ gem 'rack-jwt'
 gem "bcrypt", '~> 3.1.7'
 gem 'rack-cors'
 
+gem 'grape'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
